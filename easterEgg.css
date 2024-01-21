@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #3498db, #2ecc71, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+
+    overflow: hidden;
+
+    font-family: 'Century Gothic';
+    color: #fff;
+    
+    animation: flowBackground 10s ease infinite;
+}
+
+
+.cookie-container {
+    text-align: center;
+    z-index: 1;
+}
+
+
+.cookie {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    font-size: 5vw;
+    text-shadow: 0.13vw 0.13vw 0.26vw rgba(0, 0, 0, 0.5);
+    
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.cookie:hover {
+    font-size: 6vw;
+    text-shadow: 0.26vw 0.26vw 0.52vw rgba(0, 0, 0, 0.7);
+}
+
+
+.cookie-gif {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    opacity: 0;
+
+    user-select: none;
+}
+
+.cookie-gif img {
+    width: 32.42vw;
+    height: auto;
+
+    border-radius: 0.65vw;
+    box-shadow: 0 0 1.30vw rgba(0, 0, 0, 0.7);
+    
+    transition: all 0.3s ease;
+}
+
+
+h1,
+h2 {
+    background: linear-gradient(to right,#d8b4e3,#b3b4e3,#b4cde3,#b4e3c5,#e3e0b4,#e3c7b4,#e3b4b9);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    font-size: 2.08vw;
+    color: transparent;
+    text-shadow: 0.065vw 0.13vw 0.39vw rgba(255, 255, 255, .4);
+
+    animation: flowBackground 1s linear infinite;
+}
+
+h2 {
+    font-size: 1.6vw;
+}
+
+
+button {
+    background: inherit;
+    opacity: 0;
+    padding: 1.30vw;
+    
+    border: 0.13vw solid;
+    border-radius: 0.65vw;
+
+    font-size: 1.042vw;
+    font-weight: bold;
+    color: white;
+
+    transition: 0.25s;
+}
+
+a {
+    margin: 1.95vw 0 0 0;
+    pointer-events: none;
+}
+
+button:hover {
+    background-image: url(images/backgroundTrees.svg);
+    background-size: 10vw;
+    background-repeat: repeat;
+
+    box-shadow: 0 .52vw .52vw -0.42vw black;
+    
+    cursor: pointer;
+    transform: translateY(-0.26vw);
+}
+
+
+.fallingContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 0;
+    overflow: hidden;
+}
+
+.fallingCookie {
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    font-size: 1.04vw;
+
+    transform-origin: left top;
+}
+
+@keyframes bounce1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    85% {
+        transform: translateY(97.25vh);
+    }
+
+    100% {
+        transform: translateY(90vh);
+    }
+}
+
+@keyframes bounce2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    85% {
+        transform: translateY(97.25vh);
+    }
+
+    100% {
+        transform: translateY(85vh);
+    }
+}
+
+@keyframes flowBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

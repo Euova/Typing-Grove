@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b7599bd248.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&family=Open+Sans&family=Roboto&family=Roboto+Mono&family=Rubik&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/images/keyboardFavicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <title>Typing Grove</title>
+</head>
+
+<body>
+    <div class="options">
+        <div class = "language">
+            <button class = "englishLang selected">English</button>
+            <button class = "arabicLang">Arabic</button>
+        </div>
+        <span class="break"></span>
+        <div class="time">
+            <button class="fifteenSeconds selected">15s</button>
+            <button class="thirtySeconds">30s</button>
+            <button class="sixtySeconds">60s</button>
+        </div>
+        <span class="break timeDiff"></span>
+        <div class="difficulty">
+            <button class="easyDiff">Easy (1-4 Letters)</button>
+            <button class="mediumDiff">Medium (4-6 Letters)</button>
+            <button class="hardDiff">Hard (7-9 Letters)</button>
+            <button class="mixDiff selected">Mix (1-14 Letters)</button>
+        </div>
+    </div>
+    <div class="heart" id="randomHeart"></div>
+    <div>
+        <h1 class="startInstructions">Type the first letter to start!</h1>
+        <div class="typingBox"></div>
+        <div class="results">
+            <div class = "netwpm statisticItem">
+                <span class = "statisticLabel">Precision-adjusted WPM</span>
+                <span class="statisticValue"></span>
+                <span class = "statisticDetail hidden"></span>
+            </div>
+            <div class = "grosswpm statisticItem">
+                <span class = "statisticLabel">Raw WPM</span>
+                <span class="statisticValue"></span>
+                <span class = "statisticDetail hidden"></span>
+            </div>
+            <div class = "correctWords statisticItem">
+                <span class = "statisticLabel">Correct Words</span>
+                <span class="statisticValue"></span>
+                <span class = "statisticDetail hidden"></span>
+            </div>
+            <div class = "chars statisticItem">
+                <span class = "statisticLabel">Characters Typed</span>
+                <span class="statisticValue"></span>
+                <span class = "statisticDetail hidden"></span>
+            </div>
+            <div class = "mistakes statisticItem">
+                <span class = "statisticLabel">Mistakes</span>
+                <span class="statisticValue"></span>
+                <span class = "statisticDetail hidden"></span>
+            </div>
+            <div class = "accuracy statisticItem">
+                <span class = "statisticLabel">Accuracy</span>
+                <span class="statisticValue"></span>
+                <span class = "statisticDetail hidden"></span>
+            </div>
+        </div>
+    </div>
+    <button class="reset"><img src="images/Reset.png" class="resetImg"></button>
+    
+    <footer>
+        <a href="" onclick="window.location.reload(true);" target="_blank"><i class="fas fa-regular fa-keyboard"></i>Typing Grove</a> |<a href="https://github.com/Euova" target="_blank"><i class="fas fa-fw fa-code"></i>GitHub</a>
+    </footer>
+</body>
+
+</html>

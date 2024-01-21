@@ -1,0 +1,437 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-image: url(images/backgroundTrees.svg);
+    background-size: 20.51vw 21.16vw;
+    background-repeat: repeat;
+
+    cursor: default;
+}
+
+
+
+
+/* Options */
+.options {
+    width: 60vw;
+    background: rgb(0, 34, 43, .5);
+    mix-blend-mode: luminosity;
+
+    display: flex;
+    justify-content: space-evenly;
+    
+    border-radius: 0.39vw;
+    /* mix-blend-mode:screen; */
+}
+
+
+
+
+/* Instruction and Typing Box */
+.startInstructions {
+    margin: 0;
+    
+    text-align: center;
+    font-size: 2.1vw;
+    
+    color: white;
+}
+
+.typingBox {
+    height: 11.1vw;
+    width: 78.125vw;
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+    overflow: hidden;
+}
+
+
+
+
+/* Words and Letters Inside the Typing Box*/
+.word {
+    margin: 0.65vw;
+
+    font-size: 1.8vw;
+}
+
+.word_active {
+    margin: 0.65vw;
+
+    font-size: 1.8vw;
+}
+
+letter {
+    /* color: #8a992d; */
+    color: #83A4AD;
+}
+
+.correct {
+    color: white;
+
+    font-weight: bold;
+}
+
+.extraLetter,
+.incorrect {
+    color: red;
+
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+
+
+
+/* Typing Cursor */
+#leftCursor {
+    border-left: 0.195vw solid black;
+
+    animation: blinkLeft 0.8s infinite;
+}
+
+#rightCursor {
+    border-right: 0.195vw solid black;
+
+    animation: blinkRight 0.8s infinite;
+}
+
+@keyframes blinkLeft {
+    from {
+        border-left: 0.195vw solid rgba(255, 255, 255, 1);
+    }
+
+    to {
+        border-left: 0.195vw solid rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes blinkRight {
+    from {
+        border-right: 0.195vw solid rgba(255, 255, 255, 1);
+    }
+
+    to {
+        border-right: 0.195vw solid rgba(255, 255, 255, 0);
+    }
+}
+
+
+
+
+/* Option Buttons, Reset Button, and Line Seperating Option Categories */
+.reset,
+.options>div>button {
+    height: fit-content;
+    width: fit-content;
+    padding: 0.78vw 0.52vw;
+    margin: 0 0.26vw;
+
+    background-color: inherit;
+    
+    border: 0;
+    opacity: 50%;
+
+    font-size: 0.78vw;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.resetImg {
+    height: 1.95vw;
+    width: 1.95vw;
+}
+
+.reset:hover,
+.options>div>button:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.time>.selected,
+.difficulty>.selected,
+.language>.selected {
+    opacity: 100%;
+    font-weight: bold;
+}
+
+.break {
+    margin: 0.52vw 0;
+
+    border: 0.13vw solid rgb(0, 34, 43, 0.8);
+    border-radius: 1.95vw;
+}
+
+
+
+
+/* Result Screen */
+.results {
+    width: 19.5vw;
+    padding: 1.3vw;
+    
+    mix-blend-mode: screen;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.statisticItem {
+    margin-top: 0.977vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statisticLabel {
+    font-size: 1.43vw;
+    font-weight: bold;
+    color: #555;
+}
+
+.statisticValue {
+    margin-top: 0.33vw;
+    
+    font-size: 1.95vw;
+    color: #008000;
+}
+
+.statisticDetail {
+    display: none;
+}
+
+.statisticValue:hover+.statisticDetail {
+    padding: 0.325vw 1.3vw;
+
+    display: flex;
+    position: absolute;
+
+    background: rgb(0, 34, 43, 1);
+
+    font-size: 1.04vw;
+    font-weight: lighter;
+    color: white;
+
+    z-index: 1;
+}
+
+.statisticValue:hover {
+    cursor: pointer;
+}
+
+
+
+
+footer {
+    width: 100vw;
+    padding: .5vw;
+    position: fixed;
+    bottom: 0;
+
+    background-color: inherit;
+
+    color: rgba(255, 255, 255, 0.4);
+    font-size: .85vw;
+    text-align: center;
+}
+
+footer i {
+    padding: 1vw 0.5vw;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+}
+
+footer a:hover{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+.heart {
+    position: absolute;
+    margin: 0;
+    width: .52vw;
+    height: .52vw;
+    background-color: #023646;
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: .52vw;
+    height: .52vw;
+    background-color: #023646;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -0.26vw;
+    left: 0;   
+}
+
+.heart::after {
+    top: 0;
+    left: 0.26vw;
+}
+
+.heart:hover,
+.heart:hover::before,
+.heart:hover::after {
+    cursor: pointer;
+    background-color: #ffffff;
+    /* Change the color on hover */
+}
+
+
+
+
+/* Media query for responsiveness (Mobile) */
+@media only screen and (max-width: 768px) {
+    body{
+        justify-content: space-around;
+        background-size: 315px 325px;
+    }
+
+    .options{
+        width: 60vw;
+        border-radius: 2.39vw;
+    }
+    
+    .startInstructions {
+        margin-bottom: 2.4vw;
+        width: 100%;
+
+        font-size: 5vw;
+    }
+
+    .typingBox {
+        margin: 0 2.65vw;
+        width: fit-content;
+        height: 36.7vw;
+    }
+
+    .word, .word_active {
+        margin: 2.65vw;
+
+        font-size: 5.3vw;
+    }
+
+    .reset,
+    .options>div>button {
+        margin: 0 2.26vw;
+        padding: 2.9vw 1vw;
+        
+        font-size: 2.85vw;
+    }
+
+    .reset,
+    .options>div {
+        text-align: center;
+    }
+
+    .break {
+        margin: 2.52vw 0;
+
+        border: .5vw solid rgb(0, 34, 43, 0.8);
+        border-radius: 3.95vw;
+    }
+
+    .resetImg {
+        height: 6vw;
+        width: 6vw;
+    }
+
+    .results {
+        width: 100%;    
+        padding: 1.3vw 0 0 0;
+    }
+    
+    .statisticItem {
+        margin-top: 4vw;
+    }
+    
+    .statisticLabel {
+        font-size: 4.43vw;
+    }
+    
+    .statisticValue {
+        margin-top: 1.33vw;
+
+        font-size: 6vw;
+    }
+
+    .statisticValue:hover+.statisticDetail {
+        padding: 1vw 3.3vw;
+        
+        font-size: 3.04vw;
+    }
+
+    footer{
+        padding: 2.5vw;
+
+        font-size: 2.85vw;
+    }
+
+    footer i {
+        padding: 3vw 2vw;
+    }
+
+    .heart, .heart::after, .heart::before{
+        display: none;
+    }
+}
+
+
+
+
+/* Used in js for typingBox and timer */
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes countdown {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

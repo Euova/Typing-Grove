@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dom-particles.css">
+    <script src="dom-particles.js" defer></script>
+    <script src="click-spark.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/images/cookieFavicon.png">
+    <link rel="stylesheet" href="easterEgg.css">
+    <script src="easterEgg.js" type="module"></script>
+    <title>Easter Egg</title>
+</head>
+
+<body>
+    <div class="cookie-container">
+        <div class="cookie" onclick="createEmitter(event); changeColour('#F3AD61');">🍪</div>
+        <div class="cookie-gif">
+            <h1 class="title">Take a break from typing!<br>Get to eating the cookie, nom nom nom!</h1>
+            <h2 class="counter"></h2>
+            <img class="gifImage" src="images/chipi-chipi-chapa-chapa.gif" alt="cat GIF">
+            <a href="index.html"><button>Back to Typing!</button></a>
+        </div>
+        <div id="particle_container">
+        </div>
+        <click-spark style="--click-spark-color: #6D4534;" active-on=".cookie"></click-spark>
+    </div>
+</body>
+
+</html>

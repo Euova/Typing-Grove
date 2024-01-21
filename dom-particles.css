@@ -1,0 +1,29 @@
+#particle_container{
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  color: #FFFFFF;
+  /* background-color: #4CC2FF40; */
+  /* border: 1px solid #4CC2FF; */
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#particle_container > div{
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 3px;
+  height: 3px;
+  color: inherit;
+  background-color: currentcolor;
+  border: 1px solid currentcolor;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
